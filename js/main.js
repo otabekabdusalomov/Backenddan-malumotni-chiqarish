@@ -13,9 +13,19 @@ const renderUsers = function(arr, htmlElement) {
     }
 };
 
+const getUsers = async function() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users/");
 
+   const data = await response.json();
 
-const response = fetch("https://jsonplaceholder.typicode.com/users/")
-.then((res) => res.json())
-.then((data) => renderUsers(data, newLi));
+//    console.log(data);
+
+      renderUsers(data, elList);
+};
+
+getUsers()
+
+// const response = fetch("https://jsonplaceholder.typicode.com/users/")
+// .then((res) => res.json())
+// .then((data) => renderUsers(data, newLi));
 
