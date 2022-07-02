@@ -3,14 +3,18 @@ const elList = document.querySelector(".list");
 
 
 const renderUsers = function(arr, htmlElement) {
-    if(arr.lenght > 0) {
-        arr.forEach(item => {
-            const newLi = document.createElement("li")
-
-            newLi.textContent = item.name
-            htmlElement.appendChild(newLi);
-        });
-    }
+    setTimeout(function() {
+        if(arr.lenght > 0) {
+            elList.innerHTML = null;
+            arr.forEach(item => {
+                const newLi = document.createElement("li")
+    
+                newLi.textContent = item.name
+                htmlElement.appendChild(newLi);
+            });
+        }
+    }, 1000);
+   
 };
 
 const getUsers = async function() {
