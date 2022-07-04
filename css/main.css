@@ -5,3 +5,9 @@
     transform: translate(-50%, -50%);
 }
 
+.main-box{
+    margin-left: 300px;
+}
+.priv-btn{
+    margin-right: 82px;
+}
